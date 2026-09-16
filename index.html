@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>口腔炎药物研发进展 | Oral Mucositis Drug Pipeline</title>
+<style>
+  :root {
+    --primary: #1a5276;
+    --primary-light: #2980b9;
+    --primary-pale: #d4e6f1;
+    --bg: #f8fafc;
+    --card-bg: #ffffff;
+    --text: #1e293b;
+    --text-secondary: #64748b;
+    --border: #e2e8f0;
+    --success: #059669;
+    --warning: #d97706;
+    --danger: #dc2626;
+    --radius: 10px;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+  }
+  .container { max-width: 1400px; margin: 0 auto; padding: 24px 20px 60px; }
+
+  .header {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+    color: #fff; padding: 36px 40px; border-radius: var(--radius);
+    margin-bottom: 28px; position: relative; overflow: hidden;
+  }
+  .header::after {
+    content: ''; position: absolute; right: -40px; top: -40px;
+    width: 200px; height: 200px; background: rgba(255,255,255,0.08);
+    border-radius: 50%;
+  }
+  .header h1 { font-size: 1.6rem; font-weight: 700; margin-bottom: 6px; }
+  .header .subtitle { font-size: 0.95rem; opacity: 0.85; }
+  .header .meta { font-size: 0.8rem; opacity: 0.7; margin-top: 12px; }
+  .lang-toggle {
+    position: absolute; top: 24px; right: 28px;
+    background: rgba(255,255,255,0.18); border: 1px solid rgba(255,255,255,0.35);
+    color: #fff; padding: 6px 16px; border-radius: 20px; cursor: pointer;
+    font-size: 0.8rem; transition: background 0.2s;
+  }
+  .lang-toggle:hover { background: rgba(255,255,255,0.3); }
+
+  .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 14px; margin-bottom: 24px; }
+  .stat-card {
+    background: var(--card-bg); border-radius: var(--radius); padding: 18px 20px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06); border-left: 4px solid var(--primary-light);
+  }
+  .stat-card .num { font-size: 1.6rem; font-weight: 700; color: var(--primary); }
+  .stat-card .label { font-size: 0.78rem; color: var(--text-secondary); margin-top: 2px; }
+
+  .toolbar {
+    display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 20px;
+    background: var(--card-bg); padding: 16px 20px; border-radius: var(--radius);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .toolbar input[type="search"] {
+    flex: 1; min-width: 200px; padding: 10px 16px; border: 1px solid var(--border);
+    border-radius: 8px; font-size: 0.9rem; outline: none; transition: border-color 0.2s;
+  }
+  .toolbar input[type="search"]:focus { border-color: var(--primary-light); }
+  .toolbar select {
+    padding: 10px 14px; border: 1px solid var(--border); border-radius: 8px;
+    font-size: 0.85rem; background: #fff; outline: none; cursor: pointer;
+  }
+
+  .table-wrap { background: var(--card-bg); border-radius: var(--radius); overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+  table { width: 100%; border-collapse: collapse; font-size: 0.88rem; }
+  thead { background: var(--primary); color: #fff; }
+  th {
+    padding: 14px 16px; text-align: left; font-weight: 600; font-size: 0.82rem;
+    cursor: pointer; user-select: none; white-space: nowrap;
+  }
+  th:hover { background: var(--primary-light); }
+  th .sort-icon { margin-left: 4px; opacity: 0.6; font-size: 0.7rem; }
+  td { padding: 14px 16px; border-bottom: 1px solid var(--border); vertical-align: top; }
+  tr:last-child td { border-bottom: none; }
+  tr:hover { background: #f1f5f9; }
+  .drug-name { font-weight: 600; color: var(--primary); }
+  .drug-name-en { font-size: 0.78rem; color: var(--text-secondary); }
+  .phase-badge {
+    display: inline-block; padding: 3px 10px; border-radius: 12px;
+    font-size: 0.75rem; font-weight: 600; white-space: nowrap;
+  }
+  .phase-approved { background: #d1fae5; color: var(--success); }
+  .phase-iii { background: #dbeafe; color: #1d4ed8; }
+  .phase-ii { background: #fef3c7; color: var(--warning); }
+  .phase-preclinical { background: #f1f5f9; color: var(--text-secondary); }
+  .phase-other { background: #fce7f3; color: #be185d; }
+  .mechanism { font-size: 0.82rem; color: var(--text-secondary); line-height: 1.5; }
+  .notes { font-size: 0.8rem; color: var(--text-secondary); line-height: 1.5; max-width: 380px; }
+  .nct-link { font-size: 0.78rem; color: var(--primary-light); text-decoration: none; }
+  .nct-link:hover { text-decoration: underline; }
+
+  .empty { text-align: center; padding: 60px 20px; color: var(--text-secondary); }
+  .footer { text-align: center; margin-top: 32px; font-size: 0.78rem; color: var(--text-secondary); }
+
+  @media (max-width: 768px) {
+    .container { padding: 12px 12px 40px; }
+    .header { padding: 24px 20px; }
+    .header h1 { font-size: 1.2rem; }
+    .lang-toggle { top: 16px; right: 16px; padding: 4px 12px; font-size: 0.72rem; }
+    .toolbar { flex-direction: column; }
+    th, td { padding: 10px 10px; font-size: 0.8rem; }
+    .notes { max-width: 200px; }
+    .stats { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <div class="header">
+    <button class="lang-toggle" id="langToggle">EN</button>
+    <h1 id="pageTitle">口腔炎（OM）药物研发进展</h1>
+    <div class="subtitle" id="pageSubtitle">全球在研与已上市药物/疗法汇总 · 放射性口腔黏膜炎（RIOM）</div>
+    <div class="meta" id="pageMeta">最后更新：加载中...</div>
+  </div>
+
+  <div class="stats" id="stats"></div>
+
+  <div class="toolbar">
+    <input type="search" id="searchInput" placeholder="搜索药物名称、机制、备注...">
+    <select id="phaseFilter">
+      <option value="">全部阶段 / All Phases</option>
+      <option value="FDA批准">FDA批准</option>
+      <option value="III期">III期 / Phase III</option>
+      <option value="II期">II期 / Phase II</option>
+      <option value="临床前">临床前 / Preclinical</option>
+    </select>
+  </div>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th data-sort="name" id="th-name">药物 / Drug <span class="sort-icon">↕</span></th>
+          <th data-sort="phase" id="th-phase">阶段 / Phase <span class="sort-icon">↕</span></th>
+          <th id="th-mechanism">作用机制 / Mechanism</th>
+          <th id="th-notes">关键信息 / Key Data</th>
+        </tr>
+      </thead>
+      <tbody id="tableBody"></tbody>
+    </table>
+    <div class="empty" id="emptyState" style="display:none;">未找到匹配的药物 / No matching drugs found</div>
+  </div>
+
+  <div class="footer" id="footer">数据来源：ClinicalTrials.gov · PubMed · 公开文献 | 自动更新：每周一</div>
+</div>
+
+<script>
+let DATA = [];
+let LANG = 'cn';
+let SORT_KEY = 'name';
+let SORT_ASC = true;
+
+const i18n = {
+  cn: {
+    title: '口腔炎（OM）药物研发进展',
+    subtitle: '全球在研与已上市药物/疗法汇总 · 放射性口腔黏膜炎（RIOM）',
+    search: '搜索药物名称、机制、备注...',
+    allPhases: '全部阶段',
+    thName: '药物',
+    thPhase: '阶段',
+    thMechanism: '作用机制',
+    thNotes: '关键信息',
+    total: '药物总数',
+    approved: '已批准',
+    phase3: 'III期',
+    phase2: 'II期',
+    preclinical: '临床前',
+    footer: '数据来源：ClinicalTrials.gov · PubMed · 公开文献 | 自动更新：每周一'
+  },
+  en: {
+    title: 'Oral Mucositis (OM) Drug Pipeline',
+    subtitle: 'Global landscape of investigational and approved drugs/therapies · Radiation-Induced OM (RIOM)',
+    search: 'Search drug name, mechanism, notes...',
+    allPhases: 'All Phases',
+    thName: 'Drug',
+    thPhase: 'Phase',
+    thMechanism: 'Mechanism',
+    thNotes: 'Key Data',
+    total: 'Total Drugs',
+    approved: 'Approved',
+    phase3: 'Phase III',
+    phase2: 'Phase II',
+    preclinical: 'Preclinical',
+    footer: 'Sources: ClinicalTrials.gov · PubMed · Public literature | Auto-updated: Weekly on Monday'
+  }
+};
+
+function t(key) { return i18n[LANG][key] || key; }
+
+function getPhaseClass(phase) {
+  if (phase.includes('批准') || phase.includes('Approved')) return 'phase-approved';
+  if (phase.includes('III')) return 'phase-iii';
+  if (phase.includes('II')) return 'phase-ii';
+  if (phase.includes('临床前') || phase.includes('Preclinical')) return 'phase-preclinical';
+  return 'phase-other';
+}
+
+function renderStats() {
+  const total = DATA.length;
+  const approved = DATA.filter(d => d.phase.includes('批准') || d.phase.includes('Approved')).length;
+  const p3 = DATA.filter(d => d.phase.includes('III')).length;
+  const p2 = DATA.filter(d => d.phase.includes('II')).length;
+  const pre = DATA.filter(d => d.phase.includes('临床前') || d.phase.includes('Preclinical')).length;
+
+  document.getElementById('stats').innerHTML = `
+    <div class="stat-card"><div class="num">${total}</div><div class="label">${t('total')}</div></div>
+    <div class="stat-card"><div class="num">${approved}</div><div class="label">${t('approved')}</div></div>
+    <div class="stat-card"><div class="num">${p3}</div><div class="label">${t('phase3')}</div></div>
+    <div class="stat-card"><div class="num">${p2}</div><div class="label">${t('phase2')}</div></div>
+    <div class="stat-card"><div class="num">${pre}</div><div class="label">${t('preclinical')}</div></div>
+  `;
+}
+
+function renderTable() {
+  const query = document.getElementById('searchInput').value.toLowerCase().trim();
+  const phaseFilter = document.getElementById('phaseFilter').value;
+  const tbody = document.getElementById('tableBody');
+  const empty = document.getElementById('emptyState');
+
+  let filtered = DATA.filter(d => {
+    const matchSearch = !query || 
+      d.name_cn.toLowerCase().includes(query) ||
+      d.name_en.toLowerCase().includes(query) ||
+      d.mechanism_cn.toLowerCase().includes(query) ||
+      d.mechanism_en.toLowerCase().includes(query) ||
+      d.notes_cn.toLowerCase().includes(query) ||
+      d.notes_en.toLowerCase().includes(query);
+    const matchPhase = !phaseFilter || d.phase.includes(phaseFilter.replace('III期','III').replace('II期','II'));
+    return matchSearch && matchPhase;
+  });
+
+  filtered.sort((a, b) => {
+    let va, vb;
+    if (SORT_KEY === 'name') {
+      va = LANG === 'cn' ? a.name_cn : a.name_en;
+      vb = LANG === 'cn' ? b.name_cn : b.name_en;
+    } else if (SORT_KEY === 'phase') {
+      const order = { 'FDA批准': 0, 'FDA Approved': 0, 'III期': 1, 'Phase III': 1, 'II期': 2, 'Phase II': 2, '临床前': 3, 'Preclinical': 3 };
+      va = order[a.phase] ?? 99;
+      vb = order[b.phase] ?? 99;
+    } else { return 0; }
+    const cmp = typeof va === 'string' ? va.localeCompare(vb) : va - vb;
+    return SORT_ASC ? cmp : -cmp;
+  });
+
+  if (filtered.length === 0) {
+    tbody.innerHTML = '';
+    empty.style.display = 'block';
+    return;
+  }
+  empty.style.display = 'none';
+
+  tbody.innerHTML = filtered.map(d => {
+    const name = LANG === 'cn' ? d.name_cn : d.name_en;
+    const nameSub = LANG === 'cn' ? d.name_en : d.name_cn;
+    const mechanism = LANG === 'cn' ? d.mechanism_cn : d.mechanism_en;
+    const notes = LANG === 'cn' ? d.notes_cn : d.notes_en;
+    const phase = LANG === 'cn' ? d.phase : d.phase_en;
+    const cls = getPhaseClass(d.phase);
+    const nctHtml = d.nct_id ? `<a class="nct-link" href="https://clinicaltrials.gov/study/${d.nct_id}" target="_blank" rel="noopener">${d.nct_id} ↗</a>` : '';
+
+    return `<tr>
+      <td><div class="drug-name">${name}</div><div class="drug-name-en">${nameSub}</div>${nctHtml}</td>
+      <td><span class="phase-badge ${cls}">${phase}</span></td>
+      <td class="mechanism">${mechanism}</td>
+      <td class="notes">${notes}</td>
+    </tr>`;
+  }).join('');
+}
+
+function updateUIText() {
+  document.getElementById('pageTitle').textContent = t('title');
+  document.getElementById('pageSubtitle').textContent = t('subtitle');
+  document.getElementById('footer').textContent = t('footer');
+  document.getElementById('th-name').innerHTML = `${t('thName')} <span class="sort-icon">↕</span>`;
+  document.getElementById('th-phase').innerHTML = `${t('thPhase')} <span class="sort-icon">↕</span>`;
+  document.getElementById('th-mechanism').textContent = t('thMechanism');
+  document.getElementById('th-notes').textContent = t('thNotes');
+  document.getElementById('searchInput').placeholder = t('search');
+  document.getElementById('phaseFilter').options[0].text = t('allPhases');
+  document.getElementById('langToggle').textContent = LANG === 'cn' ? 'EN' : '中文';
+}
+
+async function init() {
+  try {
+    const res = await fetch('data.json?t=' + Date.now());
+    const json = await res.json();
+    DATA = json.drugs || [];
+    document.getElementById('pageMeta').textContent = 
+      (LANG === 'cn' ? '最后更新：' : 'Last updated: ') + new Date(json.last_updated).toLocaleString();
+  } catch(e) {
+    console.error('Failed to load data.json', e);
+    DATA = [];
+  }
+  renderStats();
+  renderTable();
+  updateUIText();
+}
+
+document.getElementById('langToggle').addEventListener('click', () => {
+  LANG = LANG === 'cn' ? 'en' : 'cn';
+  renderStats();
+  renderTable();
+  updateUIText();
+});
+document.getElementById('searchInput').addEventListener('input', renderTable);
+document.getElementById('phaseFilter').addEventListener('change', renderTable);
+document.querySelectorAll('th[data-sort]').forEach(th => {
+  th.addEventListener('click', () => {
+    const key = th.dataset.sort;
+    if (SORT_KEY === key) { SORT_ASC = !SORT_ASC; } else { SORT_KEY = key; SORT_ASC = true; }
+    renderTable();
+  });
+});
+
+init();
+</script>
+</body>
+</html>
