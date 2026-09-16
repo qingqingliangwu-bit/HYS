@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-15T00:00:00Z",
+  "last_updated": "2026-09-16T03:05:17.961448+00:00",
   "drugs": [
     {
       "name_cn": "Palifermin",
@@ -8,7 +8,7 @@
       "mechanism_en": "Recombinant human KGF-1; promotes epithelial proliferation, migration and differentiation",
       "phase": "FDA批准",
       "phase_en": "FDA Approved",
-      "nct_id": "",
+      "nct_id": "NCT01085617",
       "notes_cn": "唯一获FDA批准的OM药物。血液肿瘤干细胞移植场景：WHO 3/4级OM发生率63% vs 98%，中位持续时间3天 vs 9天。头颈癌放疗场景未复制成功。",
       "notes_en": "The only FDA-approved OM drug. In HSCT setting: Grade 3/4 OM incidence 63% vs 98%, median duration 3 vs 9 days. Failed to replicate in head & neck radiotherapy setting."
     },
@@ -50,9 +50,9 @@
       "name_en": "EC-18",
       "mechanism_cn": "先天免疫应答调节剂；具体靶点仍在阐明",
       "mechanism_en": "Innate immune response modulator; specific target under elucidation",
-      "phase": "II期完成",
-      "phase_en": "Phase II Completed",
-      "nct_id": "",
+      "phase": "II期",
+      "phase_en": "Phase II",
+      "nct_id": "NCT03200340",
       "notes_cn": "放疗≥55 Gy患者中，有效降低SOM持续时间、发作时间和发生率，延迟阿片类药物使用。",
       "notes_en": "In patients receiving ≥55 Gy, effectively reduced SOM duration, onset, and incidence; delayed opioid use."
     },
@@ -61,8 +61,8 @@
       "name_en": "RRx-001",
       "mechanism_cn": "NLRP3炎症小体抑制剂 + Nrf2激活剂；缺氧条件下释放NO",
       "mechanism_en": "NLRP3 inflammasome inhibitor + Nrf2 activator; releases NO under hypoxia",
-      "phase": "II期（PREVLAR）",
-      "phase_en": "Phase II (PREVLAR)",
+      "phase": "II期",
+      "phase_en": "Phase II",
       "nct_id": "NCT03515538",
       "notes_cn": "头颈癌CRT：Arm 1组SOM中位持续时间8.5天 vs 24天。二次分析提示可能减少多种CRT相关毒性。",
       "notes_en": "H&N CRT: Arm 1 median SOM duration 8.5 vs 24 days. Secondary analysis suggests possible reduction of multiple CRT-related toxicities."
@@ -72,8 +72,8 @@
       "name_en": "Rebamipide",
       "mechanism_cn": "黏膜保护剂；COX-2依赖PGE2合成、EGF/HGF上调、清除自由基、抑制IL-1/IL-8/TNF-α",
       "mechanism_en": "Mucosal protectant; COX-2-dependent PGE2 synthesis, EGF/HGF upregulation, free radical scavenging, IL-1/IL-8/TNF-α inhibition",
-      "phase": "III期进行中",
-      "phase_en": "Phase III Ongoing",
+      "phase": "II期",
+      "phase_en": "Phase II",
       "nct_id": "NCT04685395",
       "notes_cn": "2019荟萃分析：含漱预防放化疗OM优于安慰剂。正在进行的III期与盐酸苄达明含漱头对头比较。",
       "notes_en": "2019 meta-analysis: mouthwash superior to placebo for OM prevention. Ongoing Phase III head-to-head vs benzydamine."
@@ -116,8 +116,8 @@
       "name_en": "Sargramostim (GM-CSF) Mouthwash",
       "mechanism_cn": "免疫调节与组织修复；促进上皮增殖、增强固有免疫",
       "mechanism_en": "Immune modulation and tissue repair; promotes epithelial proliferation and innate immunity",
-      "phase": "III期完成",
-      "phase_en": "Phase III Completed",
+      "phase": "II期",
+      "phase_en": "Phase II",
       "nct_id": "NCT00293462",
       "notes_cn": "历史数据不一致，更严格RCT未优于安慰剂。探索性分析提示基线活化CD4+ T细胞比例可能预测黏膜易感性。",
       "notes_en": "Inconsistent historical data; stricter RCTs did not show superiority over placebo. Exploratory analysis suggests baseline activated CD4+ T cell ratio may predict mucosal susceptibility."
@@ -156,4 +156,4 @@
       "notes_en": "PBM group oral pain scores maintained at <4."
     }
   ]
-}      
+}
