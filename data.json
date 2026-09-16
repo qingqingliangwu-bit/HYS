@@ -1,0 +1,159 @@
+{
+  "last_updated": "2026-09-15T00:00:00Z",
+  "drugs": [
+    {
+      "name_cn": "Palifermin",
+      "name_en": "Palifermin (Kepivance)",
+      "mechanism_cn": "重组人角质细胞生长因子-1（KGF-1）；促进上皮增殖、迁移与分化",
+      "mechanism_en": "Recombinant human KGF-1; promotes epithelial proliferation, migration and differentiation",
+      "phase": "FDA批准",
+      "phase_en": "FDA Approved",
+      "nct_id": "",
+      "notes_cn": "唯一获FDA批准的OM药物。血液肿瘤干细胞移植场景：WHO 3/4级OM发生率63% vs 98%，中位持续时间3天 vs 9天。头颈癌放疗场景未复制成功。",
+      "notes_en": "The only FDA-approved OM drug. In HSCT setting: Grade 3/4 OM incidence 63% vs 98%, median duration 3 vs 9 days. Failed to replicate in head & neck radiotherapy setting."
+    },
+    {
+      "name_cn": "AG013",
+      "name_en": "AG013",
+      "mechanism_cn": "口服重组乳酸乳球菌，分泌人三叶因子1（hTFF1），促进黏膜修复",
+      "mechanism_en": "Oral recombinant Lactococcus lactis secreting hTFF1; promotes mucosal repair",
+      "phase": "II期已终止",
+      "phase_en": "Phase II Terminated",
+      "nct_id": "NCT03234465",
+      "notes_cn": "Ib期：UOM天数减少35%。II期状态为Terminated。",
+      "notes_en": "Phase Ib: 35% reduction in UOM days. Phase II status: Terminated."
+    },
+    {
+      "name_cn": "GC4419（Avasopasem）",
+      "name_en": "GC4419 (Avasopasem Manganese)",
+      "mechanism_cn": "选择性超氧化物歧化酶模拟物；清除放疗产生的超氧阴离子自由基",
+      "mechanism_en": "Selective SOD mimetic; scavenges superoxide radicals from radiotherapy",
+      "phase": "III期完成，FDA拒批",
+      "phase_en": "Phase III Completed, FDA CRL",
+      "nct_id": "NCT03689712",
+      "notes_cn": "ROMAN试验：严重OM发生率64%→54%，中位持续时间18天→8天。FDA认为不足以支撑实质性证据。",
+      "notes_en": "ROMAN: Severe OM incidence 64%→54%, median duration 18→8 days. FDA deemed insufficient for substantial evidence."
+    },
+    {
+      "name_cn": "SGX942（Dusquetide）",
+      "name_en": "SGX942 (Dusquetide)",
+      "mechanism_cn": "先天免疫调节剂；调节巨噬细胞反应，加速炎症消退",
+      "mechanism_en": "Innate immune modulator; regulates macrophage response to accelerate inflammation resolution",
+      "phase": "III期完成，未达终点",
+      "phase_en": "Phase III Completed, Missed Endpoint",
+      "nct_id": "NCT03237325",
+      "notes_cn": "III期（n=266）：SOM中位持续时间12.5天 vs 20.0天，未达统计学显著性门槛。",
+      "notes_en": "Phase III (n=266): Median SOM duration 12.5 vs 20.0 days, failed to reach statistical significance."
+    },
+    {
+      "name_cn": "EC-18",
+      "name_en": "EC-18",
+      "mechanism_cn": "先天免疫应答调节剂；具体靶点仍在阐明",
+      "mechanism_en": "Innate immune response modulator; specific target under elucidation",
+      "phase": "II期完成",
+      "phase_en": "Phase II Completed",
+      "nct_id": "",
+      "notes_cn": "放疗≥55 Gy患者中，有效降低SOM持续时间、发作时间和发生率，延迟阿片类药物使用。",
+      "notes_en": "In patients receiving ≥55 Gy, effectively reduced SOM duration, onset, and incidence; delayed opioid use."
+    },
+    {
+      "name_cn": "RRx-001",
+      "name_en": "RRx-001",
+      "mechanism_cn": "NLRP3炎症小体抑制剂 + Nrf2激活剂；缺氧条件下释放NO",
+      "mechanism_en": "NLRP3 inflammasome inhibitor + Nrf2 activator; releases NO under hypoxia",
+      "phase": "II期（PREVLAR）",
+      "phase_en": "Phase II (PREVLAR)",
+      "nct_id": "NCT03515538",
+      "notes_cn": "头颈癌CRT：Arm 1组SOM中位持续时间8.5天 vs 24天。二次分析提示可能减少多种CRT相关毒性。",
+      "notes_en": "H&N CRT: Arm 1 median SOM duration 8.5 vs 24 days. Secondary analysis suggests possible reduction of multiple CRT-related toxicities."
+    },
+    {
+      "name_cn": "瑞巴派特",
+      "name_en": "Rebamipide",
+      "mechanism_cn": "黏膜保护剂；COX-2依赖PGE2合成、EGF/HGF上调、清除自由基、抑制IL-1/IL-8/TNF-α",
+      "mechanism_en": "Mucosal protectant; COX-2-dependent PGE2 synthesis, EGF/HGF upregulation, free radical scavenging, IL-1/IL-8/TNF-α inhibition",
+      "phase": "III期进行中",
+      "phase_en": "Phase III Ongoing",
+      "nct_id": "NCT04685395",
+      "notes_cn": "2019荟萃分析：含漱预防放化疗OM优于安慰剂。正在进行的III期与盐酸苄达明含漱头对头比较。",
+      "notes_en": "2019 meta-analysis: mouthwash superior to placebo for OM prevention. Ongoing Phase III head-to-head vs benzydamine."
+    },
+    {
+      "name_cn": "美洲大蠊提取物",
+      "name_en": "Periplaneta americana Extract (MeiLianFuXin)",
+      "mechanism_cn": "多靶点抗炎与促修复",
+      "mechanism_en": "Multi-target anti-inflammatory and pro-repair",
+      "phase": "II期完成",
+      "phase_en": "Phase II Completed",
+      "nct_id": "",
+      "notes_cn": "首个RIOM中药随机双盲试验：低剂量组严重OM发生率22.2%，安慰剂组43.7%（P=0.0042）。",
+      "notes_en": "First RCT of TCM for RIOM: Severe OM incidence 22.2% (low dose) vs 43.7% (placebo), P=0.0042."
+    },
+    {
+      "name_cn": "Hangeshashinto（TJ-14）",
+      "name_en": "Hangeshashinto (TJ-14)",
+      "mechanism_cn": "抑制COX-2、中性粒细胞趋化；清除羟自由基",
+      "mechanism_en": "COX-2 and neutrophil chemotaxis inhibition; hydroxyl radical scavenging",
+      "phase": "临床前",
+      "phase_en": "Preclinical",
+      "nct_id": "",
+      "notes_cn": "仓鼠模型：严重黏膜炎发生率从100%降至16.7%（P<0.05）。",
+      "notes_en": "Hamster model: Severe mucositis incidence reduced from 100% to 16.7% (P<0.05)."
+    },
+    {
+      "name_cn": "SAMITAL",
+      "name_en": "SAMITAL",
+      "mechanism_cn": "标准化植物提取物复方",
+      "mechanism_en": "Standardized botanical extract complex",
+      "phase": "II期，结果不一致",
+      "phase_en": "Phase II, Inconsistent",
+      "nct_id": "",
+      "notes_cn": "一项RCT（n=116）：未显著降低严重RIOM，但生活质量显著更好。另一小型研究（n=30）报告可显著降低RIOM严重程度。",
+      "notes_en": "One RCT (n=116): No significant reduction in severe RIOM, but QoL significantly better. Another small study (n=30) reported significant reduction."
+    },
+    {
+      "name_cn": "沙格司亭（GM-CSF）含漱液",
+      "name_en": "Sargramostim (GM-CSF) Mouthwash",
+      "mechanism_cn": "免疫调节与组织修复；促进上皮增殖、增强固有免疫",
+      "mechanism_en": "Immune modulation and tissue repair; promotes epithelial proliferation and innate immunity",
+      "phase": "III期完成",
+      "phase_en": "Phase III Completed",
+      "nct_id": "NCT00293462",
+      "notes_cn": "历史数据不一致，更严格RCT未优于安慰剂。探索性分析提示基线活化CD4+ T细胞比例可能预测黏膜易感性。",
+      "notes_en": "Inconsistent historical data; stricter RCTs did not show superiority over placebo. Exploratory analysis suggests baseline activated CD4+ T cell ratio may predict mucosal susceptibility."
+    },
+    {
+      "name_cn": "SIRT2激活剂",
+      "name_en": "SIRT2 Activator (e.g., Nicotinamide Riboside)",
+      "mechanism_cn": "激活SIRT2，促进同源重组介导的DNA双链断裂修复，保护口腔黏膜干细胞",
+      "mechanism_en": "Activates SIRT2; promotes homologous recombination-mediated DSB repair; protects oral mucosal stem cells",
+      "phase": "临床前",
+      "phase_en": "Preclinical",
+      "nct_id": "",
+      "notes_cn": "小鼠模型：保护免于RIOM，不损害癌细胞放疗敏感性。",
+      "notes_en": "Mouse model: Protects against RIOM without compromising cancer radiosensitivity."
+    },
+    {
+      "name_cn": "载药微针贴片（CBT@MNs）",
+      "name_en": "Drug-loaded Microneedle Patch (CBT@MNs)",
+      "mechanism_cn": "局部递送氯喹+黄芩素纳米粒；阻断TFRC介导的铁摄取，抑制铁死亡",
+      "mechanism_en": "Local delivery of chloroquine + baicalein nanoparticles; blocks TFRC-mediated iron uptake, inhibits ferroptosis",
+      "phase": "临床前",
+      "phase_en": "Preclinical",
+      "nct_id": "",
+      "notes_cn": "大鼠模型：显著减轻溃疡、加速愈合，机制涉及抗炎、血管生成和胶原沉积。",
+      "notes_en": "Rat model: Significantly reduces ulcers and accelerates healing; mechanisms involve anti-inflammation, angiogenesis, and collagen deposition."
+    },
+    {
+      "name_cn": "光生物调节疗法（PBM）",
+      "name_en": "Photobiomodulation (PBM)",
+      "mechanism_cn": "调节氧化应激、炎症介质与细胞修复信号",
+      "mechanism_en": "Modulates oxidative stress, inflammatory mediators, and cell repair signaling",
+      "phase": "指南推荐",
+      "phase_en": "Guideline Recommended",
+      "nct_id": "",
+      "notes_cn": "PBM组口腔疼痛评分维持在<4。",
+      "notes_en": "PBM group oral pain scores maintained at <4."
+    }
+  ]
+}      
